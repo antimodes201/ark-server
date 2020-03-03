@@ -21,6 +21,7 @@ ENV ADDITIONAL_OPTS ""
 ENV ADDITIONAL_ARGS ""
 ENV TZ "America/New_York"
 ENV TYPE "MASTER"
+ENV BattleEye "-NoBattlEye"
 
 # dependencies
 RUN dpkg --add-architecture i386 && \
