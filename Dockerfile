@@ -48,13 +48,12 @@ RUN adduser \
         && chown steamuser:steamuser /steamcmd \
 		&& chown steamuser:steamuser /scripts 
 
-# Install Steamcmd
+# Install Steamcmd 
+# depreciated.  Moved into start script
 USER steamuser
-RUN cd /steamcmd && \
-	wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz && \
-	tar -xf steamcmd_linux.tar.gz && \
-	rm steamcmd_linux.tar.gz && \
-	/steamcmd/steamcmd.sh +quit
+
+# -automanagedmods fixes
+RUN mkdir -p ~/.steam/sdk32/
 
 ADD start.sh /scripts/start.sh
 

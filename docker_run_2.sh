@@ -7,7 +7,7 @@ docker run -it -p 7779-7780:7779-7780/udp -p 27016:27016/udp -p 27021:27021 -v /
 -e TYPE="SLAVE" \
 -e MAP="Ragnarok" \
 -e ADDITIONAL_OPTS="?AltSaveDirectoryName=Ragnarok" \
--e ADDITIONAL_ARGS="-clusterid=t3stn3t -ClusterDirOverride=/ark/cluster" \
+-e ADDITIONAL_ARGS="-clusterid=t3stn3t -ClusterDirOverride=/ark/cluster -automanagedmods" \
 -e GAME_PORT="7779" \
 -e GAME_PORT2="7780" \
 -e QUERY_PORT="27016" \
