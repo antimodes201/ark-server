@@ -17,9 +17,8 @@ fi
 #check if master
 if [ ${TYPE} == "MASTER" ]
 then
-	/ark/steamcmd/steamcmd.sh +login anonymous +force_install_dir /ark +app_update 376030 +quit
+	/ark/steamcmd/steamcmd.sh +force_install_dir /ark +login anonymous +app_update 376030 +quit
 fi
-
 
 # -automanagedmods fixes
 if [ ! -f  /ark/Engine/Binaries/ThirdParty/SteamCMD/Linux/steamcmd.sh ]
@@ -29,6 +28,7 @@ then
 	wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
 	tar -xf steamcmd_linux.tar.gz
 	mkdir /ark/mods
+	ln -sf /home/steamuser/Steam/steamapps /ark/Engine/Binaries/ThirdParty/SteamCMD/Linux/steamapps
 fi
 
 mkdir -p /home/steamuser/Steam/steamapps/

@@ -41,11 +41,9 @@ RUN adduser \
     --shell /bin/bash \
     steamuser && \
     usermod -G tty steamuser \
-        && mkdir -p /steamcmd \
         && mkdir -p /ark \
 		&& mkdir -p /scripts \
         && chown steamuser:steamuser /ark \
-        && chown steamuser:steamuser /steamcmd \
 		&& chown steamuser:steamuser /scripts 
 
 # Install Steamcmd 
